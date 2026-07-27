@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sütterlin Malergeschäft – Basel</title>
+<style>
+  :root{ --blau:#2e5f7a; --creme:#f4f1ea; --dunkel:#20211e; --accent:#e0a944; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Segoe UI', Arial, sans-serif; color:var(--dunkel); background:var(--creme); line-height:1.7; }
+  img { max-width:100%; display:block; }
+  nav.top { position:sticky; top:0; z-index:20; display:flex; justify-content:space-between; align-items:center; padding:18px 6vw; background:rgba(244,241,234,0.94); backdrop-filter:blur(6px); border-bottom:1px solid #ddd6c8; }
+  nav.top .logo { font-weight:800; color:var(--dunkel); font-size:1.15em; }
+  nav.top .links { display:flex; gap:30px; align-items:center; }
+  nav.top .links a.nl { color:#4a4a44; text-decoration:none; font-weight:600; font-size:0.95em; }
+  .btn { display:inline-block; border-radius:8px; font-weight:800; text-decoration:none; text-align:center; transition:transform .15s; }
+  .btn-primary { background:var(--blau); color:#fff; padding:14px 30px; box-shadow:0 8px 22px rgba(46,95,122,0.25); }
+  .btn-primary:hover { transform:translateY(-3px); }
+  .btn-ghost { border:2px solid var(--dunkel); color:var(--dunkel); padding:12px 28px; }
+  header.hero { min-height:82vh; display:flex; align-items:center; position:relative; overflow:hidden; }
+  header.hero img.bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.5; }
+  header.hero .overlay { position:absolute; inset:0; background:linear-gradient(180deg, rgba(244,241,234,0.55), rgba(244,241,234,0.97)); }
+  .hero-content { position:relative; z-index:2; max-width:1200px; margin:0 auto; padding:0 6vw; }
+  .badge { background:var(--blau); color:#fff; padding:7px 18px; border-radius:30px; font-weight:800; font-size:0.85em; display:inline-block; margin-bottom:24px; }
+  header.hero h1 { font-size:3.2em; line-height:1.1; margin-bottom:20px; max-width:740px; color:var(--dunkel); }
+  header.hero p.lead { font-size:1.2em; opacity:0.9; max-width:540px; margin-bottom:34px; color:#4a4a44; }
+  .hero-ctas { display:flex; gap:16px; flex-wrap:wrap; }
+  section { padding:90px 6vw; }
+  .wrap { max-width:1200px; margin:0 auto; }
+  .kicker { color:var(--blau); font-weight:800; text-transform:uppercase; font-size:0.85em; letter-spacing:2px; margin-bottom:14px; display:block; }
+  h2 { color:var(--dunkel); font-size:2.3em; margin-bottom:18px; max-width:700px; }
+  p.section-sub { font-size:1.1em; color:#6b6b62; max-width:620px; margin-bottom:44px; }
+  .vorher-nachher { display:grid; grid-template-columns:1fr 1fr; gap:20px; border-radius:20px; overflow:hidden; }
+  .vorher-nachher figure { position:relative; height:340px; }
+  .vorher-nachher img { width:100%; height:100%; object-fit:cover; }
+  .vorher-nachher figcaption { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(0deg, rgba(0,0,0,0.6), transparent); color:#fff; padding:14px 18px; font-weight:700; }
+  .leistungen { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:22px; margin-top:40px; }
+  .card { background:#fff; border-radius:16px; padding:28px 22px; border:1px solid #ddd6c8; }
+  .card h3 { color:var(--dunkel); margin-bottom:8px; font-size:1.05em; }
+  .card p { color:#6b6b62; font-size:0.92em; }
+  .about { display:grid; grid-template-columns:0.9fr 1.1fr; gap:50px; align-items:center; background:#fff; border-radius:24px; padding:50px; border:1px solid #ddd6c8; }
+  .about img { border-radius:18px; }
+  .contact-grid { display:grid; grid-template-columns:1.1fr 0.9fr; gap:36px; }
+  .contact-card { background:#fff; border:1px solid #ddd6c8; border-radius:20px; padding:40px; }
+  .contact-card h3 { color:var(--blau); margin-bottom:16px; font-size:1.3em; }
+  .contact-card p { margin-bottom:10px; color:#20211e; }
+  .contact-img { border-radius:20px; overflow:hidden; }
+  .contact-img img { height:100%; object-fit:cover; }
+  footer { text-align:center; padding:40px; color:#9a9488; font-size:0.9em; border-top:1px solid #ddd6c8; }
+  @media (max-width:900px){
+    header.hero h1{ font-size:2em; }
+    .vorher-nachher{ grid-template-columns:1fr; }
+    .about, .contact-grid{ grid-template-columns:1fr; padding:32px; }
+    nav.top .links{ display:none; }
+  }
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="logo">Sütterlin <span style="color:var(--blau)">Malergeschäft</span></div>
+  <div class="links">
+    <a class="nl" href="#vorher-nachher">Vorher/Nachher</a>
+    <a class="nl" href="#leistungen">Leistungen</a>
+    <a class="nl" href="#ueber-uns">Über uns</a>
+    <a class="btn btn-primary" style="padding:10px 22px;" href="#kontakt">Kontakt</a>
+  </div>
+</nav>
+<header class="hero">
+  <img class="bg" src="https://picsum.photos/seed/basel-maler-hero/1600/1000" alt="Frisch gestrichenes Zimmer">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <div class="badge">🖌️ Malergeschäft · Basel &amp; Münchenstein</div>
+    <h1>Tradition, Erfahrung und Qualität – seit Generationen.</h1>
+    <p class="lead">Sütterlin Malergeschäft – Ihr zuverlässiger Partner für Renovationen und Bodenbeläge in Basel und Münchenstein.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#kontakt">Offerte anfragen</a>
+      <a class="btn btn-ghost" href="#vorher-nachher">Beispiele ansehen</a>
+    </div>
+  </div>
+</header>
+<section id="vorher-nachher">
+  <div class="wrap">
+    <span class="kicker">Wirkung, die überzeugt</span>
+    <h2>Vorher &amp; Nachher</h2>
+    <p class="section-sub">Ein Blick auf typische Renovationsarbeiten – Bildbeispiele für diese Muster-Website.</p>
+    <div class="vorher-nachher">
+      <figure><img src="https://picsum.photos/seed/basel-maler-vorher/700/700" alt="Zimmer vor der Renovation"><figcaption>Vorher</figcaption></figure>
+      <figure><img src="https://picsum.photos/seed/basel-maler-nachher/700/700" alt="Zimmer nach der Renovation"><figcaption>Nachher</figcaption></figure>
+    </div>
+    <div class="leistungen">
+      <div class="card"><h3>Malerarbeiten</h3><p>Innen und aussen, klassisch oder modern.</p></div>
+      <div class="card"><h3>Bodenbeläge</h3><p>Verlegung von Laminat und Parkettböden.</p></div>
+      <div class="card"><h3>Renovationen</h3><p>Umfassende Renovationsarbeiten aus einer Hand.</p></div>
+    </div>
+  </div>
+</section>
+<section id="ueber-uns">
+  <div class="wrap about">
+    <img src="https://picsum.photos/seed/basel-maler-team/700/800" alt="Maler bei der Arbeit in Basel">
+    <div class="about-text">
+      <span class="kicker">Der Betrieb</span>
+      <h2>Über uns</h2>
+      <p>Setzen Sie auf Tradition, Erfahrung und Qualität – das Sütterlin Malergeschäft ist Ihr zuverlässiger Partner für alle Maler- und Renovationsarbeiten in Basel und Umgebung.</p>
+    </div>
+  </div>
+</section>
+<section id="kontakt">
+  <div class="wrap contact-grid">
+    <div class="contact-card">
+      <span class="kicker">Direkt anfragen</span>
+      <h3>Sütterlin Malergeschäft</h3>
+      <p>Büro: Rümelinbachweg 15, 4054 Basel</p>
+      <p>Werkstatt: Frankfurt-Strasse 54, 4142 Münchenstein</p>
+      <p>Telefon: 061 281 21 65 · Mobile: 079 322 34 67</p>
+      <p>E-Mail: dsuetterlin@bluewin.ch</p>
+      <a class="btn btn-primary" style="margin-top:14px;" href="tel:0612812165">Jetzt anrufen</a>
+    </div>
+    <div class="contact-img">
+      <img src="https://picsum.photos/seed/basel-maler-kontakt/600/700" alt="Malerwerkzeug">
+    </div>
+  </div>
+</section>
+<footer>&copy; Sütterlin Malergeschäft · Basel — Diese Seite ist ein unverbindliches Muster-Design zur Ansicht.</footer>
+</body>
+</html>
